@@ -7,7 +7,7 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Clock, Headphones, Mic, ChevronRight } from "lucide-react";
+import { ArrowRight, Clock, Headphones, Mic, ChevronRight, Play } from "lucide-react";
 import { motion } from "framer-motion";
 import { podcastEpisodes, podcastCategories } from "@/lib/podcastData";
 import { IMAGES } from "@/lib/images";
@@ -101,9 +101,9 @@ export default function Podcast() {
                     alt={filteredEpisodes[0]?.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-navy/40 flex items-center justify-center">
-                    <div className="w-20 h-20 rounded-full bg-gold/90 flex items-center justify-center shadow-xl">
-                      <Headphones size={32} className="text-navy" />
+                  <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/50 transition-all flex items-center justify-center">
+                    <div className="w-20 h-20 rounded-full bg-gold/90 group-hover:bg-gold transition-all flex items-center justify-center shadow-xl">
+                      <Play size={32} className="text-navy fill-navy ml-1" />
                     </div>
                   </div>
                 </div>
@@ -154,9 +154,9 @@ export default function Podcast() {
                         alt={episode.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
-                      <div className="absolute inset-0 bg-navy/30 flex items-center justify-center">
-                        <div className="w-14 h-14 rounded-full bg-gold/90 flex items-center justify-center">
-                          <Headphones size={22} className="text-navy" />
+                      <div className="absolute inset-0 bg-navy/30 group-hover:bg-navy/40 transition-all flex items-center justify-center">
+                        <div className="w-14 h-14 rounded-full bg-gold/90 group-hover:bg-gold transition-all flex items-center justify-center">
+                          <Play size={22} className="text-navy fill-navy ml-0.5" />
                         </div>
                       </div>
                     </div>

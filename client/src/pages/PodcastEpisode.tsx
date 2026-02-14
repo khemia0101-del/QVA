@@ -4,9 +4,10 @@
  * Purpose: Lead generation through podcast transcript and episode content
  */
 
+import { useState, useRef } from "react";
 import { Link, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, ArrowRight, Clock, Calendar, Headphones, ListMusic } from "lucide-react";
+import { ArrowLeft, ArrowRight, Clock, Calendar, Headphones, ListMusic, Play, Pause } from "lucide-react";
 import { motion } from "framer-motion";
 import { podcastEpisodes } from "@/lib/podcastData";
 import { IMAGES } from "@/lib/images";
@@ -14,6 +15,47 @@ import { IMAGES } from "@/lib/images";
 export default function PodcastEpisode() {
   const params = useParams<{ slug: string }>();
   const episode = podcastEpisodes.find((e) => e.slug === params.slug);
+  const audioRef = useRef<HTMLAudioElement>(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+
+  const togglePlayPause = () => {
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.pause();
+      } else {
+        audioRef.current.play();
+      }
+      setIsPlaying(!isPlaying);
+    }
+  };
+
+  const handleTimeUpdate = () => {
+    if (audioRef.current) {
+      setCurrentTime(audioRef.current.currentTime);
+    }
+  };
+
+  const handleLoadedMetadata = () => {
+    if (audioRef.current) {
+      setDuration(audioRef.current.duration);
+    }
+  };
+
+  const handleSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newTime = (parseFloat(e.target.value) / 100) * duration;
+    if (audioRef.current) {
+      audioRef.current.currentTime = newTime;
+    }
+  };
+
+  const formatTime = (time: number) => {
+    if (!time) return "0:00";
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds.toString().padStart(2, "0")}`;
+  };
 
   if (!episode) {
     return (
@@ -64,14 +106,28 @@ export default function PodcastEpisode() {
 
             <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-1">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl relative group cursor-pointer">
                   <img src={episode.coverImage} alt={episode.title} className="w-full h-full object-cover" />
-                  <div className="absolute inset-0 bg-navy/30 flex items-center justify-center">
-                    <div className="w-24 h-24 rounded-full bg-gold/90 flex items-center justify-center shadow-xl">
-                      <Headphones size={40} className="text-navy" />
-                    </div>
+                  <div className="absolute inset-0 bg-navy/40 group-hover:bg-navy/50 transition-all flex items-center justify-center">
+                    <button
+                      onClick={togglePlayPause}
+                      className="w-28 h-28 rounded-full bg-gold hover:bg-gold-dark transition-all transform hover:scale-110 flex items-center justify-center shadow-2xl"
+                    >
+                      {isPlaying ? (
+                        <Pause size={56} className="text-navy fill-navy" />
+                      ) : (
+                        <Play size={56} className="text-navy fill-navy ml-1" />
+                      )}
+                    </button>
                   </div>
                 </div>
+                <audio 
+                  ref={audioRef} 
+                  src={episode.audioUrl} 
+                  onEnded={() => setIsPlaying(false)}
+                  onTimeUpdate={handleTimeUpdate}
+                  onLoadedMetadata={handleLoadedMetadata}
+                />
               </div>
 
               <div className="lg:col-span-2">
@@ -89,9 +145,40 @@ export default function PodcastEpisode() {
                 <p className="text-white/60 text-lg leading-relaxed mb-6">
                   {episode.subtitle}
                 </p>
-                <div className="flex items-center gap-6 text-white/40 text-sm">
+                <div className="flex items-center gap-6 text-white/40 text-sm mb-6">
                   <span className="flex items-center gap-2"><Clock size={16} /> {episode.duration}</span>
                   <span className="flex items-center gap-2"><Calendar size={16} /> {episode.date}</span>
+                </div>
+
+                {/* Audio Player Controls */}
+                <div className="bg-white/10 backdrop-blur rounded-lg p-4 border border-gold/30">
+                  <div className="flex items-center gap-4">
+                    <button
+                      onClick={togglePlayPause}
+                      className="flex-shrink-0 w-12 h-12 rounded-full bg-gold hover:bg-gold-dark transition-all flex items-center justify-center"
+                    >
+                      {isPlaying ? (
+                        <Pause size={24} className="text-navy fill-navy" />
+                      ) : (
+                        <Play size={24} className="text-navy fill-navy ml-0.5" />
+                      )}
+                    </button>
+                    <div className="flex-1">
+                      <div className="text-white/60 text-xs font-medium mb-2">Now Playing</div>
+                      <input
+                        type="range"
+                        min="0"
+                        max="100"
+                        value={duration ? (currentTime / duration) * 100 : 0}
+                        onChange={handleSeek}
+                        className="w-full h-1 bg-white/20 rounded-full appearance-none cursor-pointer accent-gold"
+                      />
+                      <div className="flex justify-between text-white/40 text-xs mt-1">
+                        <span>{formatTime(currentTime)}</span>
+                        <span>{formatTime(duration)}</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

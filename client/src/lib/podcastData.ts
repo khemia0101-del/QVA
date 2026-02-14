@@ -14,6 +14,7 @@ export interface PodcastEpisode {
   date: string;
   category: string;
   coverImage: string;
+  audioUrl: string;
   description: string;
   timestamps: { time: string; label: string }[];
   transcript: string[];
@@ -34,6 +35,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     date: "February 12, 2026",
     category: "Getting Started",
     coverImage: "https://images.unsplash.com/photo-1478737270239-2f02b77fc618?w=800&q=80",
+    audioUrl: "/podcast-ep1.wav",
     description: `In this premiere episode of The Credit Partnership Playbook, we break down the entire credit partnership model from scratch. If you've ever wondered whether your excellent credit score could actually make you money — without investing a dime — this episode is for you. We explain the five-step process, walk through a real deal example, and address the biggest concerns people have before getting started.`,
     timestamps: [
       { time: "0:00", label: "Introduction — Why your credit score is an untapped asset" },
@@ -105,6 +107,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     date: "February 10, 2026",
     category: "DSCR Education",
     coverImage: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80",
+    audioUrl: "/podcast-ep2.wav",
     description: `In episode 2, we take a deep dive into DSCR loans — the financing tool that makes credit partnerships possible. We explain what DSCR stands for, how the math works, why these loans don't require income verification, and most importantly, why your credit score is the key ingredient that determines the interest rate. If you've ever been confused by real estate financing, this episode makes it crystal clear.`,
     timestamps: [
       { time: "0:00", label: "Introduction — Why you need to understand DSCR" },
@@ -176,6 +179,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     date: "February 7, 2026",
     category: "Credit Strategy",
     coverImage: "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80",
+    audioUrl: "/podcast-ep3.wav",
     description: `In episode 3, we explore five different strategies for leveraging your credit score in 2026. Most people only use their credit for borrowing — but there are several ways to make your score actively generate income. We cover credit card rewards optimization, balance transfer arbitrage, authorized user strategies, business credit leveraging, and of course, real estate credit partnerships. We break down the pros and cons of each and explain why credit partnerships offer the highest payout potential.`,
     timestamps: [
       { time: "0:00", label: "Introduction — Your credit score is an asset, not just a number" },
