@@ -67,6 +67,12 @@ export default function FAQ() {
       icon: AlertCircle,
       category: "legal",
     },
+    {
+      question: "Do you have a referral program?",
+      answer: "Yes! We pay a **$5,000 flat referral fee** for every qualified credit partner you refer who completes a partnership. There's no limit on how many people you can refer. Additionally, you're free to negotiate any additional fee directly with the credit partner you refer — we don't interfere with that arrangement. Many of our partners refer friends and family and earn $15K–$25K per year in referral income alone. Contact us at referrals@qvaholdings.com to get your unique referral link.",
+      icon: Users,
+      category: "financial",
+    },
   ];
 
   const categories = [

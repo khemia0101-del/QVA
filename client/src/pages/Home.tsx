@@ -34,6 +34,7 @@ import ScarcityBanner from "@/components/ScarcityBanner";
 import ValueStack from "@/components/ValueStack";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
+import ReferralProgram from "@/components/ReferralProgram";
 
 // CDN URLs for property images
 const IMAGES = {
@@ -639,6 +640,9 @@ export default function Home() {
 
       {/* ─── FAQ ─── */}
       <FAQ />
+
+      {/* ─── REFERRAL PROGRAM ─── */}
+      <ReferralProgram />
 
       {/* ─── APPLICATION FORM ─── */}
       <section

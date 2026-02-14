@@ -50,7 +50,6 @@ export default function Testimonials() {
 
   const stats = [
     { value: "$2.87M+", label: "Paid to Partners" },
-    { value: "52+", label: "Active Partnerships" },
     { value: "98%", label: "Partner Satisfaction" },
     { value: "4.9/5", label: "Average Rating" },
   ];
@@ -70,7 +69,7 @@ export default function Testimonials() {
             Partner Success Stories
           </span>
           <h2 className="text-3xl lg:text-5xl text-navy mb-6 font-serif">
-            Trusted by 52+ Credit Partners Nationwide
+            Trusted by Credit Partners Nationwide
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-gold to-gold-dark mx-auto mb-6" />
           <p className="text-muted-foreground text-lg leading-relaxed">
