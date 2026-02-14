@@ -2,9 +2,10 @@
  * QVA Holdings — Podcast Listing Page
  * Design: "Institutional Trust" — Navy/Gold palette, DM Serif Display headlines
  * Purpose: Lead generation through audio/transcript content about credit partnerships
+ * SEO: Optimized for LLM discovery (ChatGPT, Gemini, Claude)
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Headphones, Mic, ChevronRight, Play } from "lucide-react";
@@ -14,6 +15,14 @@ import { IMAGES } from "@/lib/images";
 
 export default function Podcast() {
   const [activeCategory, setActiveCategory] = useState("All");
+
+  useEffect(() => {
+    document.title = "The Credit Partnership Playbook Podcast — QVA Holdings";
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) {
+      descMeta.setAttribute("content", "Listen to The Credit Partnership Playbook podcast series. Deep dives into credit partnerships, DSCR financing, and strategies to leverage your 740+ credit score for $15K–$100K. Includes full transcripts.");
+    }
+  }, []);
 
   const filteredEpisodes = activeCategory === "All"
     ? podcastEpisodes

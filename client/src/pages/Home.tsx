@@ -195,7 +195,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <img
             src={IMAGES.heroBg}
-            alt=""
+            alt="Modern city skyline representing real estate credit partnership opportunities"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/60" />
@@ -453,7 +453,7 @@ export default function Home() {
                 />
                 <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-xl p-5 border border-border">
                   <div className="flex items-center gap-3">
-                    <img src={IMAGES.shieldIcon} alt="" className="w-12 h-12" />
+                    <img src={IMAGES.shieldIcon} alt="Non-recourse protection shield icon" className="w-12 h-12" />
                     <div>
                       <div className="text-navy font-serif text-lg">100%</div>
                       <div className="text-muted-foreground text-xs font-medium tracking-wide uppercase">Asset Protected</div>
@@ -574,7 +574,7 @@ export default function Home() {
         className="py-24 lg:py-32 relative"
       >
         <div className="absolute inset-0">
-          <img src={IMAGES.ctaBg} alt="" className="w-full h-full object-cover" />
+          <img src={IMAGES.ctaBg} alt="Real estate portfolio background" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-navy/90" />
         </div>
 

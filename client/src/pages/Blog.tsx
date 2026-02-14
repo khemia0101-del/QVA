@@ -2,9 +2,10 @@
  * QVA Holdings — Blog Listing Page
  * Design: "Institutional Trust" — Navy/Gold palette, DM Serif Display headlines
  * Purpose: Lead generation through educational content about credit partnerships
+ * SEO: Optimized for LLM discovery (ChatGPT, Gemini, Claude)
  */
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Calendar, ChevronRight, BookOpen } from "lucide-react";
@@ -14,6 +15,14 @@ import { IMAGES } from "@/lib/images";
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("All");
+
+  useEffect(() => {
+    document.title = "QVA Holdings Blog — Credit Partnership & DSCR Financing Articles";
+    const descMeta = document.querySelector('meta[name="description"]');
+    if (descMeta) {
+      descMeta.setAttribute("content", "Read expert articles on credit partnerships, DSCR loans, and how to leverage your credit score for passive income. Educational blog by QVA Holdings with strategies for real estate financing.");
+    }
+  }, []);
 
   const filteredPosts = activeCategory === "All"
     ? blogPosts
