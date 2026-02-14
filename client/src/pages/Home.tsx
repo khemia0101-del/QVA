@@ -27,6 +27,7 @@ import {
   X,
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
+import { Link } from "wouter";
 
 // CDN URLs for property images
 const IMAGES = {
@@ -127,7 +128,6 @@ export default function Home() {
               { label: "How It Works", id: "how-it-works" },
               { label: "Portfolio", id: "portfolio" },
               { label: "Protection", id: "protection" },
-              { label: "Video", id: "video" },
             ].map((item) => (
               <button
                 key={item.id}
@@ -137,6 +137,8 @@ export default function Home() {
                 {item.label}
               </button>
             ))}
+            <Link href="/blog" className="text-white/70 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">Blog</Link>
+            <Link href="/podcast" className="text-white/70 hover:text-gold transition-colors text-sm font-medium tracking-wide uppercase">Podcast</Link>
             <Button
               onClick={() => scrollToSection("apply")}
               className="bg-gold hover:bg-gold-dark text-navy font-semibold px-6 tracking-wide"
@@ -166,7 +168,6 @@ export default function Home() {
                 { label: "How It Works", id: "how-it-works" },
                 { label: "Portfolio", id: "portfolio" },
                 { label: "Protection", id: "protection" },
-                { label: "Video", id: "video" },
               ].map((item) => (
                 <button
                   key={item.id}
@@ -176,6 +177,8 @@ export default function Home() {
                   {item.label}
                 </button>
               ))}
+              <Link href="/blog" className="text-white/70 hover:text-gold transition-colors text-left py-2 text-sm font-medium tracking-wide uppercase block">Blog</Link>
+              <Link href="/podcast" className="text-white/70 hover:text-gold transition-colors text-left py-2 text-sm font-medium tracking-wide uppercase block">Podcast</Link>
               <Button
                 onClick={() => scrollToSection("apply")}
                 className="bg-gold hover:bg-gold-dark text-navy font-semibold mt-2"
@@ -263,11 +266,10 @@ export default function Home() {
       <section className="relative -mt-16 z-10">
         <div className="container">
           <div className="bg-white rounded-xl shadow-2xl shadow-navy/10 border border-border p-8 lg:p-10">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <div className="grid grid-cols-3 gap-8 lg:gap-12">
               {[
                 { value: 25, prefix: "$", suffix: "K+", label: "Maximum Payout" },
                 { value: 740, prefix: "", suffix: "+", label: "Minimum Credit Score" },
-                { value: 6, prefix: "", suffix: "", label: "Properties in Portfolio" },
                 { value: 100, prefix: "", suffix: "%", label: "Non-Recourse Protection" },
               ].map((stat, i) => (
                 <div key={i} className="text-center">
@@ -779,6 +781,8 @@ export default function Home() {
                     {link.label}
                   </button>
                 ))}
+                <Link href="/blog" className="block text-white/50 hover:text-gold transition-colors text-sm">Blog</Link>
+                <Link href="/podcast" className="block text-white/50 hover:text-gold transition-colors text-sm">Podcast</Link>
               </div>
             </div>
 
