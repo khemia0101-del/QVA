@@ -4,13 +4,14 @@
  * Purpose: Lead generation through podcast transcript and episode content
  */
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Link, useParams } from "wouter";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, ArrowRight, Clock, Calendar, Headphones, ListMusic, Play, Pause } from "lucide-react";
 import { motion } from "framer-motion";
 import { podcastEpisodes } from "@/lib/podcastData";
 import { IMAGES } from "@/lib/images";
+import { updateMetaTags, generatePodcastEpisodeSchema, generateBreadcrumbSchema, formatDateISO, formatDurationISO, cleanupSchemas } from "@/lib/seo";
 
 export default function PodcastEpisode() {
   const params = useParams<{ slug: string }>();
@@ -71,6 +72,55 @@ export default function PodcastEpisode() {
   }
 
   const otherEpisodes = podcastEpisodes.filter((e) => e.slug !== episode.slug);
+
+  // SEO: Update meta tags and schema when episode loads
+  useEffect(() => {
+    if (!episode) return;
+
+    const url = `https://qvaholdings.com/podcast/${episode.slug}`;
+
+    // Update meta tags
+    updateMetaTags({
+      title: `${episode.title} | The Credit Partnership Playbook Podcast`,
+      description: episode.description,
+      canonical: url,
+      ogImage: episode.coverImage,
+      ogType: "music.song",
+      keywords: [
+        "credit partnership podcast",
+        "DSCR financing",
+        "real estate podcast",
+        "credit score strategies",
+        episode.category.toLowerCase(),
+      ],
+      author: "QVA Holdings",
+      publishedTime: formatDateISO(episode.date),
+    });
+
+    // Generate PodcastEpisode schema
+    generatePodcastEpisodeSchema({
+      title: episode.title,
+      description: episode.description,
+      datePublished: formatDateISO(episode.date),
+      duration: formatDurationISO(episode.duration),
+      audioUrl: episode.audioUrl,
+      image: episode.coverImage,
+      episodeNumber: episode.episodeNumber,
+      url,
+    });
+
+    // Generate breadcrumb schema
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://qvaholdings.com" },
+      { name: "Podcast", url: "https://qvaholdings.com/podcast" },
+      { name: episode.title, url },
+    ]);
+
+    // Cleanup on unmount
+    return () => {
+      cleanupSchemas(["podcast-episode-schema", "breadcrumb-schema"]);
+    };
+  }, [episode]);
 
   return (
     <div className="min-h-screen flex flex-col">

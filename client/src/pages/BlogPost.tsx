@@ -10,10 +10,58 @@ import { ArrowLeft, ArrowRight, Clock, Calendar, Share2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { blogPosts } from "@/lib/blogData";
 import { IMAGES } from "@/lib/images";
+import { useEffect } from "react";
+import { updateMetaTags, generateArticleSchema, generateBreadcrumbSchema, formatDateISO, cleanupSchemas } from "@/lib/seo";
 
 export default function BlogPost() {
   const params = useParams<{ slug: string }>();
   const post = blogPosts.find((p) => p.slug === params.slug);
+
+  // SEO: Update meta tags and schema when post loads
+  useEffect(() => {
+    if (!post) return;
+
+    const url = `https://qvaholdings.com/blog/${post.slug}`;
+
+    // Update meta tags
+    updateMetaTags({
+      title: `${post.title} | QVA Holdings Blog`,
+      description: post.metaDescription,
+      canonical: url,
+      ogImage: post.heroImage,
+      ogType: "article",
+      keywords: [
+        "credit partnership",
+        "DSCR loan",
+        "real estate financing",
+        "credit score monetization",
+        post.category.toLowerCase(),
+      ],
+      author: "QVA Holdings",
+      publishedTime: formatDateISO(post.date),
+    });
+
+    // Generate Article schema
+    generateArticleSchema({
+      title: post.title,
+      description: post.metaDescription,
+      image: post.heroImage,
+      datePublished: formatDateISO(post.date),
+      url,
+    });
+
+    // Generate breadcrumb schema
+    generateBreadcrumbSchema([
+      { name: "Home", url: "https://qvaholdings.com" },
+      { name: "Blog", url: "https://qvaholdings.com/blog" },
+      { name: post.title, url },
+    ]);
+
+    // Cleanup on unmount
+    return () => {
+      cleanupSchemas(["article-schema", "breadcrumb-schema"]);
+    };
+  }, [post]);
 
   if (!post) {
     return (
