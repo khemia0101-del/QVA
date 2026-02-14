@@ -1,5 +1,5 @@
 /*
- * Queen Ventures — Real Estate Credit Partnership Landing Page
+ * QVA Holdings — Real Estate Credit Partnership Landing Page
  * Design: "Institutional Trust" — Corporate Finance Aesthetic
  * Colors: Deep Navy (#1a2744) + Warm Gold (#c9a84c) + Cream backgrounds
  * Typography: DM Serif Display (headlines) + DM Sans (body)
@@ -115,9 +115,9 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/95 backdrop-blur-md border-b border-white/10">
         <div className="container flex items-center justify-between h-16 lg:h-20">
           <div className="flex items-center gap-3">
-            <img src={IMAGES.shieldIcon} alt="Queen Ventures" className="w-9 h-9 lg:w-11 lg:h-11" />
+            <img src={IMAGES.shieldIcon} alt="QVA Holdings" className="w-9 h-9 lg:w-11 lg:h-11" />
             <div>
-              <span className="text-white font-serif text-lg lg:text-xl tracking-wide">Queen Ventures</span>
+              <span className="text-white font-serif text-lg lg:text-xl tracking-wide">QVA Holdings</span>
             </div>
           </div>
 
@@ -484,7 +484,7 @@ export default function Home() {
                 {showVideo ? (
                   <iframe
                     src="https://www.youtube.com/embed/Ph4yth-AjzM?autoplay=1"
-                    title="Queen Ventures Explainer Video"
+                    title="QVA Holdings Explainer Video"
                     className="w-full h-full"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
@@ -754,11 +754,11 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <img src={IMAGES.shieldIcon} alt="Queen Ventures" className="w-10 h-10" />
-                <span className="text-white font-serif text-xl">Queen Ventures</span>
+                <img src={IMAGES.shieldIcon} alt="QVA Holdings" className="w-10 h-10" />
+                <span className="text-white font-serif text-xl">QVA Holdings</span>
               </div>
               <p className="text-white/50 text-sm leading-relaxed">
-                Real estate credit partnerships backed by tangible assets and protected by non-recourse legal structures.
+                Real estate credit partnerships backed by tangible assets and protected by non-recourse legal structures. Visit us at qvaholdings.com
               </p>
             </div>
 
@@ -785,8 +785,8 @@ export default function Home() {
             <div>
               <h4 className="text-gold font-medium text-sm tracking-widest uppercase mb-4">Contact</h4>
               <div className="space-y-3">
-                <a href="mailto:info@queenventures.com" className="flex items-center gap-2 text-white/50 hover:text-gold transition-colors text-sm">
-                  <Mail size={16} /> info@queenventures.com
+                <a href="mailto:info@qvaholdings.com" className="flex items-center gap-2 text-white/50 hover:text-gold transition-colors text-sm">
+                  <Mail size={16} /> info@qvaholdings.com
                 </a>
                 <a
                   href="https://www.youtube.com/watch?v=Ph4yth-AjzM"
@@ -804,7 +804,7 @@ export default function Home() {
 
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white/30 text-xs">
-              &copy; {new Date().getFullYear()} Queen Ventures. All rights reserved.
+              &copy; {new Date().getFullYear()} QVA Holdings. All rights reserved.
             </p>
             <p className="text-white/30 text-xs text-center md:text-right max-w-lg">
               This is not financial advice. All partnerships are subject to due diligence and formal legal agreements. Past performance does not guarantee future results.
