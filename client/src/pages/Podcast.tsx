@@ -197,7 +197,7 @@ export default function Podcast() {
             Your Credit Score Is Worth More Than You Think
           </h2>
           <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-            If you have a 740+ credit score, you could earn $10K–$25K through a credit partnership with QVA Holdings. No cash investment. No repayment.
+            If you have a 740+ credit score, you could earn $15K–$100K through a credit partnership with QVA Holdings. No cash investment. No repayment.
           </p>
           <Link href="/#apply">
             <Button size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-10 py-6">

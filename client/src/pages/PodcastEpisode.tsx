@@ -205,7 +205,7 @@ export default function PodcastEpisode() {
               <div className="sticky top-28">
                 {/* Apply CTA Card */}
                 <div className="bg-navy rounded-xl p-6 mb-8">
-                  <h3 className="text-white font-serif text-lg mb-3">Earn $10K–$25K</h3>
+                  <h3 className="text-white font-serif text-lg mb-3">Earn $15K–$100K</h3>
                   <p className="text-white/50 text-sm mb-4 leading-relaxed">
                     Your 740+ credit score could earn you a lump-sum payout. No cash investment required.
                   </p>

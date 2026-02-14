@@ -27,9 +27,9 @@ export const podcastEpisodes: PodcastEpisode[] = [
   {
     slug: "what-is-a-credit-partnership-and-how-to-earn-10k-25k",
     episodeNumber: 1,
-    title: "What Is a Credit Partnership? How Your Score Can Earn You $10K–$25K",
+    title: "What Is a Credit Partnership? How Your Score Can Earn You $15K–$100K",
     subtitle: "We break down the credit partnership model in plain English — how it works, who qualifies, and why your 740+ score is worth real money.",
-    metaDescription: "Episode 1: Learn what a real estate credit partnership is and how people with 740+ credit scores are earning $10K–$25K lump-sum payouts.",
+    metaDescription: "Episode 1: Learn what a real estate credit partnership is and how people with 740+ credit scores are earning $15K–$100K lump-sum payouts.",
     duration: "22 min",
     date: "February 12, 2026",
     category: "Getting Started",
@@ -46,7 +46,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
       { time: "21:00", label: "How to apply and next steps" },
     ],
     transcript: [
-      `Welcome to The Credit Partnership Playbook by QVA Holdings. I'm your host, and today we're going to talk about something that most people have never heard of — but that could put $10,000 to $25,000 in your pocket if you have a credit score of 740 or higher.`,
+      `Welcome to The Credit Partnership Playbook by QVA Holdings. I'm your host, and today we're going to talk about something that most people have never heard of — but that could put $15,000 to $100,000 in your pocket if you have a credit score of 740 or higher.`,
 
       `It's called a credit partnership, and it's one of the most overlooked ways to generate income in 2026. So let's break it down.`,
 
@@ -68,7 +68,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
 
       `Step four: That better interest rate generates real, measurable savings on the loan. We're talking thousands of dollars.`,
 
-      `Step five: At closing, you receive your payout. It's a lump sum — typically $10,000 to $25,000, sometimes more depending on the deal size. It's guaranteed in writing before you ever commit.`,
+      `Step five: At closing, you receive your payout. It's a lump sum — typically $15,000 to $100,000, sometimes more depending on the deal size. It's guaranteed in writing before you ever commit.`,
 
       `## Let Me Give You a Real Example`,
 
@@ -92,7 +92,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     ],
     cta: {
       headline: "Ready to Put Your Credit to Work?",
-      text: "If you have a 740+ credit score, you could earn $10K–$25K through a credit partnership. Apply at qvaholdings.com — it takes 2 minutes.",
+      text: "If you have a 740+ credit score, you could earn $15K–$100K through a credit partnership. Apply at qvaholdings.com — it takes 2 minutes.",
     },
   },
   {
@@ -119,7 +119,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     transcript: [
       `Welcome back to The Credit Partnership Playbook. In today's episode, we're going to talk about the engine that makes credit partnerships possible — the DSCR loan.`,
 
-      `If you listened to episode one, you know that a credit partnership pays you $10K to $25K for lending your credit score to a real estate refinance. But to really understand why your credit score is so valuable, you need to understand how DSCR loans work. And don't worry — I'm going to explain this in the simplest way possible.`,
+      `If you listened to episode one, you know that a credit partnership pays you $15K to $100K for lending your credit score to a real estate refinance. But to really understand why your credit score is so valuable, you need to understand how DSCR loans work. And don't worry — I'm going to explain this in the simplest way possible.`,
 
       `## What Does DSCR Stand For?`,
 
@@ -155,7 +155,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
 
       `## Why This Creates an Opportunity for You`,
 
-      `Let me connect the dots. QVA Holdings owns income-producing properties. They refinance using DSCR loans. Your 740+ credit score dramatically improves the interest rate. The savings are real and substantial. They share those savings with you as a $10K–$25K payout. And the non-recourse structure means your personal assets are protected.`,
+      `Let me connect the dots. QVA Holdings owns income-producing properties. They refinance using DSCR loans. Your 740+ credit score dramatically improves the interest rate. The savings are real and substantial. They share those savings with you as a $15K–$100K payout. And the non-recourse structure means your personal assets are protected.`,
 
       `It's a straightforward value exchange: your credit score creates value, and you get paid for that value. No cash investment. No property management. No repayment.`,
 
@@ -170,8 +170,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
     slug: "5-ways-to-leverage-your-credit-score-in-2026",
     episodeNumber: 3,
     title: "5 Ways to Leverage Your Credit Score in 2026 (Most People Only Know 2)",
-    subtitle: "Your credit score can do more than get you a mortgage. Here are five strategies — including one that could pay you $25K.",
-    metaDescription: "Episode 3: Discover 5 ways to leverage your credit score for income in 2026, including real estate credit partnerships that pay $10K–$25K.",
+    subtitle: "Your credit score can do more than get you a mortgage. Here are five strategies — including one that could pay you $100K.",
+    metaDescription: "Episode 3: Discover 5 ways to leverage your credit score for income in 2026, including real estate credit partnerships that pay $15K–$100K.",
     duration: "25 min",
     date: "February 7, 2026",
     category: "Credit Strategy",
@@ -192,7 +192,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
 
       `Most people think of their credit score in one dimension: it determines whether they can borrow money and at what rate. But in 2026, there are actually multiple ways to make your credit score work for you — some of which can generate serious income.`,
 
-      `Today I'm going to walk you through five strategies. Most people only know about the first two. But strategy number five is the one that could put $10,000 to $25,000 in your pocket.`,
+      `Today I'm going to walk you through five strategies. Most people only know about the first two. But strategy number five is the one that could put $15,000 to $100,000 in your pocket.`,
 
       `## Strategy 1: Credit Card Rewards Optimization`,
 
@@ -222,13 +222,13 @@ export const podcastEpisodes: PodcastEpisode[] = [
 
       `## Strategy 5: Real Estate Credit Partnerships`,
 
-      `And now we get to the strategy that I believe offers the best risk-reward ratio of all five. A real estate credit partnership pays you $10,000 to $25,000 — as a lump sum, at closing — for partnering your credit score with a real estate company's property refinance.`,
+      `And now we get to the strategy that I believe offers the best risk-reward ratio of all five. A real estate credit partnership pays you $15,000 to $100,000 — as a lump sum, at closing — for partnering your credit score with a real estate company's property refinance.`,
 
       `You don't invest any money. You don't take on personal debt. The loans are non-recourse, meaning your personal assets are protected. And the payout is guaranteed in writing before you commit.`,
 
       `Compare that to the other four strategies. Credit card rewards might earn you $2,000 a year. Balance transfer arbitrage might earn you $1,500. Authorized user income might earn you a few hundred dollars. Business credit requires you to actually run a business.`,
 
-      `A single credit partnership can pay you $10,000 to $25,000 in one transaction. And you can participate in multiple partnerships over time.`,
+      `A single credit partnership can pay you $15,000 to $100,000 in one transaction. And you can participate in multiple partnerships over time.`,
 
       `## The Bottom Line`,
 
@@ -238,7 +238,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     ],
     cta: {
       headline: "Your Credit Score Could Be Your Highest-Earning Asset",
-      text: "Stop leaving money on the table. A single credit partnership with QVA Holdings could pay you $10K–$25K. Apply now at qvaholdings.com.",
+      text: "Stop leaving money on the table. A single credit partnership with QVA Holdings could pay you $15K–$100K. Apply now at qvaholdings.com.",
     },
   },
 ];

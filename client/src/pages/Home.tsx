@@ -221,7 +221,7 @@ export default function Home() {
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1] mb-6"
             >
               Turn Your Credit Score Into{" "}
-              <span className="gold-gradient-text">$10K–$25K</span>
+              <span className="gold-gradient-text">$15K–$100K</span>
             </motion.h1>
 
             <motion.p
@@ -268,7 +268,7 @@ export default function Home() {
           <div className="bg-white rounded-xl shadow-2xl shadow-navy/10 border border-border p-8 lg:p-10">
             <div className="grid grid-cols-3 gap-8 lg:gap-12">
               {[
-                { value: 25, prefix: "$", suffix: "K+", label: "Maximum Payout" },
+                { value: 100, prefix: "$", suffix: "K+", label: "Maximum Payout" },
                 { value: 740, prefix: "", suffix: "+", label: "Minimum Credit Score" },
                 { value: 100, prefix: "", suffix: "%", label: "Non-Recourse Protection" },
               ].map((stat, i) => (
@@ -330,7 +330,7 @@ export default function Home() {
                 step: 5,
                 icon: DollarSign,
                 title: "We Share Savings",
-                desc: "You receive $10K–$25K as a lump-sum payout at closing. Guaranteed in writing.",
+                desc: "You receive $15K–$100K as a lump-sum payout at closing. Guaranteed in writing.",
               },
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
@@ -507,7 +507,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="absolute bottom-6 left-6 text-left">
-                      <div className="text-white font-serif text-xl">The $25K Credit Unlock</div>
+                      <div className="text-white font-serif text-xl">The $100K Credit Unlock</div>
                       <div className="text-white/60 text-sm">Turn Your Score into Cash — 6 min</div>
                     </div>
                   </button>
@@ -591,7 +591,7 @@ export default function Home() {
 
                 <div className="space-y-6">
                   {[
-                    { icon: DollarSign, text: "Earn $10,000–$25,000 lump sum" },
+                    { icon: DollarSign, text: "Earn $15,000–$100,000 lump sum" },
                     { icon: Shield, text: "Non-recourse protection on all deals" },
                     { icon: FileCheck, text: "Formal legal agreement provided" },
                     { icon: Building2, text: "Backed by real, income-producing assets" },
@@ -723,7 +723,7 @@ export default function Home() {
               },
               {
                 q: "How much can I earn?",
-                a: "Payouts range from $10,000 to $25,000+ depending on the property value, loan terms, and the savings your credit score helps generate. Your exact payout is guaranteed in writing before you commit.",
+                a: "Payouts range from $15,000 to $100,000+ depending on the property value, loan terms, and the savings your credit score helps generate. Your exact payout is guaranteed in writing before you commit.",
               },
               {
                 q: "What credit score do I need?",
