@@ -30,6 +30,10 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+import ScarcityBanner from "@/components/ScarcityBanner";
+import ValueStack from "@/components/ValueStack";
+import Testimonials from "@/components/Testimonials";
+import FAQ from "@/components/FAQ";
 
 // CDN URLs for property images
 const IMAGES = {
@@ -99,9 +103,29 @@ export default function Home() {
     phone: "",
     creditScore: "",
   });
+  const [creditReportFile, setCreditReportFile] = useState<File | null>(null);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      // Validate file size (max 10MB)
+      if (file.size > 10 * 1024 * 1024) {
+        toast.error("File size must be less than 10MB");
+        return;
+      }
+      // Validate file type
+      const allowedTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png'];
+      if (!allowedTypes.includes(file.type)) {
+        toast.error("Please upload a PDF or image file (JPG, PNG)");
+        return;
+      }
+      setCreditReportFile(file);
+      toast.success(`File "${file.name}" selected`);
+    }
+  };
 
   const submitLeadMutation = trpc.leads.submit.useMutation();
 
@@ -110,14 +134,28 @@ export default function Home() {
     setIsSubmitting(true);
 
     try {
+      // If file is uploaded, convert to base64 for submission
+      let fileData = null;
+      if (creditReportFile) {
+        const reader = new FileReader();
+        fileData = await new Promise((resolve, reject) => {
+          reader.onload = () => resolve(reader.result);
+          reader.onerror = reject;
+          reader.readAsDataURL(creditReportFile);
+        });
+      }
+
       await submitLeadMutation.mutateAsync({
         name: formData.name,
         email: formData.email,
         phone: formData.phone,
         creditScore: formData.creditScore,
+        creditReportFile: fileData as string | null,
+        creditReportFileName: creditReportFile?.name || null,
       });
       setFormSubmitted(true);
       setFormData({ name: "", email: "", phone: "", creditScore: "" });
+      setCreditReportFile(null);
       toast.success("Application submitted! We'll contact you within 24 hours.");
     } catch (error) {
       toast.error("Failed to submit application. Please try again.");
@@ -211,6 +249,9 @@ export default function Home() {
           </motion.div>
         )}
       </nav>
+
+      {/* ─── SCARCITY BANNER ─── */}
+      <ScarcityBanner />
 
       {/* ─── HERO SECTION ─── */}
       <section className="relative min-h-screen flex items-center pt-20">
@@ -378,6 +419,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ─── VALUE STACK ─── */}
+      <ValueStack />
 
       {/* ─── PORTFOLIO SECTION ─── */}
       <section id="portfolio" className="py-24 lg:py-32 bg-navy">
@@ -590,6 +634,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── TESTIMONIALS ─── */}
+      <Testimonials />
+
+      {/* ─── FAQ ─── */}
+      <FAQ />
+
       {/* ─── APPLICATION FORM ─── */}
       <section
         id="apply"
@@ -698,6 +748,30 @@ export default function Home() {
                         onChange={(e) => setFormData({ ...formData, creditScore: e.target.value })}
                         className="h-12 border-border focus:border-gold focus:ring-gold/20"
                       />
+                    </div>
+
+                    <div>
+                      <Label htmlFor="creditReport" className="text-navy font-medium mb-1.5 block">
+                        Credit Report (Optional)
+                      </Label>
+                      <div className="relative">
+                        <Input
+                          id="creditReport"
+                          type="file"
+                          accept=".pdf,.jpg,.jpeg,.png"
+                          onChange={handleFileChange}
+                          className="h-12 border-border focus:border-gold focus:ring-gold/20 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-gold/10 file:text-gold-dark hover:file:bg-gold/20 cursor-pointer"
+                        />
+                      </div>
+                      {creditReportFile && (
+                        <div className="mt-2 flex items-center gap-2 text-sm text-green-600">
+                          <CheckCircle2 size={16} />
+                          <span>{creditReportFile.name} ({(creditReportFile.size / 1024 / 1024).toFixed(2)} MB)</span>
+                        </div>
+                      )}
+                      <p className="text-xs text-muted-foreground mt-1.5">
+                        Upload your credit report (PDF, JPG, or PNG, max 10MB). This helps us verify your score faster.
+                      </p>
                     </div>
 
                     <Button

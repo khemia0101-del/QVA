@@ -26,6 +26,8 @@ export const appRouter = router({
         email: z.string().email("Valid email is required"),
         phone: z.string().min(10, "Valid phone is required"),
         creditScore: z.string().min(3, "Credit score is required"),
+        creditReportFile: z.string().nullable().optional(),
+        creditReportFileName: z.string().nullable().optional(),
       }))
       .mutation(async ({ input }) => {
         try {
@@ -34,12 +36,15 @@ export const appRouter = router({
             email: input.email,
             phone: input.phone,
             creditScore: input.creditScore,
+            creditReportFile: input.creditReportFile || null,
+            creditReportFileName: input.creditReportFileName || null,
           });
 
           // Notify owner of new lead
+          const fileInfo = input.creditReportFileName ? ` | Credit Report: ${input.creditReportFileName}` : '';
           await notifyOwner({
             title: "New Credit Partnership Lead",
-            content: `New lead submission from ${input.name} (${input.email}). Credit Score: ${input.creditScore}. Phone: ${input.phone}`,
+            content: `New lead submission from ${input.name} (${input.email}). Credit Score: ${input.creditScore}. Phone: ${input.phone}${fileInfo}`,
           });
 
           return { success: true };

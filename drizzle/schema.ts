@@ -34,6 +34,8 @@ export const leads = mysqlTable("leads", {
   email: varchar("email", { length: 320 }).notNull(),
   phone: varchar("phone", { length: 20 }).notNull(),
   creditScore: varchar("creditScore", { length: 10 }).notNull(),
+  creditReportFile: text("creditReportFile"), // Base64 encoded file data
+  creditReportFileName: varchar("creditReportFileName", { length: 255 }),
   createdAt: timestamp("createdAt").defaultNow().notNull(),
 });
 
