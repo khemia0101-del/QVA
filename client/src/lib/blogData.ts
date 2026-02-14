@@ -23,9 +23,9 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "how-to-leverage-your-credit-score-for-passive-income",
-    title: "How to Turn Your 740+ Credit Score Into $15K–$100K in Passive Income",
+    title: "How to Turn Your 740+ Credit Score Into $5K–$35K in Passive Income",
     subtitle: "Your credit score is worth more than you think. Here's how smart people are monetizing it without taking on debt.",
-    metaDescription: "Learn how people with 740+ credit scores are earning $15K–$100K in lump-sum payouts through real estate credit partnerships — no cash investment required.",
+    metaDescription: "Learn how people with 740+ credit scores are earning $5K–$35K in lump-sum payouts through real estate credit partnerships — no cash investment required.",
     category: "Credit Strategy",
     readTime: "7 min read",
     date: "February 12, 2026",
@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
 
       `When someone with a 740+ credit score co-signs on a DSCR refinance, it can drop the interest rate significantly. On a $500,000 property, even a 0.5% rate reduction can save tens of thousands of dollars over the life of the loan.`,
 
-      `The real estate company shares those savings with you as a **lump-sum payout at closing** — typically between $15,000 and $100,000 per deal.`,
+      `The real estate company shares those savings with you as a **lump-sum payout at closing** — typically between $5,250 and $35,000 per deal.`,
 
       `## Why This Isn't Like Co-Signing for a Friend`,
 
@@ -75,7 +75,7 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: {
       headline: "Ready to Put Your Credit Score to Work?",
-      text: "If you have a 740+ credit score, you could earn $15K–$100K through a credit partnership with QVA Holdings. No cash investment. No repayment. Apply in 2 minutes.",
+      text: "If you have a 740+ credit score, you could earn $5K–$35K through a credit partnership with QVA Holdings. No cash investment. No repayment. Apply in 2 minutes.",
     },
   },
   {
@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     content: [
       `If you've ever applied for a mortgage, you know the drill: hand over your tax returns, W-2s, bank statements, pay stubs, and basically your entire financial life story. Traditional lenders want to know everything about your personal income before they'll approve a loan.`,
 
-      `But there's a completely different type of real estate financing that flips this model on its head. It's called a **DSCR loan**, and understanding how it works is the key to understanding why credit partnerships can pay you $15K–$100K.`,
+      `But there's a completely different type of real estate financing that flips this model on its head. It's called a **DSCR loan**, and understanding how it works is the key to understanding why credit partnerships can pay you $5K–$35K.`,
 
       `## What Is a DSCR Loan?`,
 
@@ -116,7 +116,7 @@ export const blogPosts: BlogPost[] = [
 
       `A borrower with a 680 credit score might get a DSCR loan at 8.5% interest. A borrower with a 760 credit score might get the same loan at 7.0%. On a $500,000 property, that 1.5% difference translates to roughly **$7,500 per year in savings** — or over $200,000 over the life of a 30-year loan.`,
 
-      `This is why real estate companies like QVA Holdings actively seek credit partners. Your excellent credit score unlocks significantly better loan terms, and the savings are substantial enough that sharing them with you — in the form of a $15K–$100K lump-sum payout — still makes strong financial sense for both parties.`,
+      `This is why real estate companies like QVA Holdings actively seek credit partners. Your excellent credit score unlocks significantly better loan terms, and the savings are substantial enough that sharing them with you — in the form of a $5K–$35K lump-sum payout — still makes strong financial sense for both parties.`,
 
       `## The Non-Recourse Advantage`,
 
@@ -136,14 +136,14 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: {
       headline: "Your Credit Score Could Be Earning You Money Right Now",
-      text: "QVA Holdings uses DSCR loans to refinance income-producing properties. Your 740+ credit score could unlock better rates — and earn you $15K–$100K. See if you qualify.",
+      text: "QVA Holdings uses DSCR loans to refinance income-producing properties. Your 740+ credit score could unlock better rates — and earn you $5K–$35K. See if you qualify.",
     },
   },
   {
     slug: "what-is-a-real-estate-credit-partnership",
     title: "What Is a Real Estate Credit Partnership? The Complete Guide for 2026",
     subtitle: "Everything you need to know about earning money by partnering your credit with real estate investors.",
-    metaDescription: "Complete guide to real estate credit partnerships in 2026. Learn how to earn $15K–$100K by partnering your excellent credit score with real estate investors.",
+    metaDescription: "Complete guide to real estate credit partnerships in 2026. Learn how to earn $5K–$35K by partnering your excellent credit score with real estate investors.",
     category: "Getting Started",
     readTime: "10 min read",
     date: "February 8, 2026",
@@ -270,7 +270,7 @@ export const blogPosts: BlogPost[] = [
     ],
     cta: {
       headline: "Protected Partnership, Guaranteed Payout",
-      text: "Every QVA Holdings credit partnership includes non-recourse protection, LLC structure, and a formal legal agreement. Your payout of $15K–$100K is guaranteed in writing. Apply today.",
+      text: "Every QVA Holdings credit partnership includes non-recourse protection, LLC structure, and a formal legal agreement. Your payout of $5K–$35K is guaranteed in writing. Apply today.",
     },
   },
 ];

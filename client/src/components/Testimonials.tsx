@@ -23,8 +23,8 @@ export default function Testimonials() {
       name: "Sarah M.",
       location: "Atlanta, GA",
       creditScore: 780,
-      payout: "$32,000",
-      quote: "I was skeptical at first, but after my attorney reviewed everything, I realized this was legitimate. I earned $32,000 in 45 days. My credit score actually IMPROVED during the partnership.",
+      payout: "$11,200",
+      quote: "I was skeptical at first, but after my attorney reviewed everything, I realized this was legitimate. I earned $11,200 in 45 days. My credit score actually IMPROVED during the partnership.",
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80",
       outcome: "Credit score increased to 795",
     },
@@ -32,7 +32,7 @@ export default function Testimonials() {
       name: "Marcus T.",
       location: "Phoenix, AZ",
       creditScore: 755,
-      payout: "$48,500",
+      payout: "$16,975",
       quote: "As a teacher, I never thought my credit score could generate this kind of income. The QVA team walked me through every step, and the non-recourse protection gave me complete peace of mind.",
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80",
       outcome: "Completed 2nd partnership",
@@ -41,7 +41,7 @@ export default function Testimonials() {
       name: "Jennifer L.",
       location: "Dallas, TX",
       creditScore: 810,
-      payout: "$67,000",
+      payout: "$23,450",
       quote: "I've been in finance for 15 years and I've never seen a program like this. The transparency, the legal protections, and the payout exceeded my expectations. This is how smart people leverage credit.",
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
       outcome: "Referred 3 colleagues",
@@ -49,8 +49,8 @@ export default function Testimonials() {
   ];
 
   const stats = [
-    { value: "$8.2M+", label: "Paid to Partners" },
-    { value: "150+", label: "Active Partnerships" },
+    { value: "$2.87M+", label: "Paid to Partners" },
+    { value: "52+", label: "Active Partnerships" },
     { value: "98%", label: "Partner Satisfaction" },
     { value: "4.9/5", label: "Average Rating" },
   ];
@@ -70,11 +70,11 @@ export default function Testimonials() {
             Partner Success Stories
           </span>
           <h2 className="text-3xl lg:text-5xl text-navy mb-6 font-serif">
-            Trusted by 150+ Credit Partners Nationwide
+            Trusted by 52+ Credit Partners Nationwide
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-gold to-gold-dark mx-auto mb-6" />
           <p className="text-muted-foreground text-lg leading-relaxed">
-            Real people. Real results. See how credit partners are earning $15K–$100K 
+            Real people. Real results. See how credit partners are earning $5K–$35K 
             through strategic real estate partnerships.
           </p>
         </motion.div>

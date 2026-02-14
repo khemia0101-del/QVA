@@ -28,9 +28,9 @@ export const podcastEpisodes: PodcastEpisode[] = [
   {
     slug: "what-is-a-credit-partnership-and-how-to-earn-10k-25k",
     episodeNumber: 1,
-    title: "What Is a Credit Partnership? How Your Score Can Earn You $15K–$100K",
+    title: "What Is a Credit Partnership? How Your Score Can Earn You $5K–$35K",
     subtitle: "We break down the credit partnership model in plain English — how it works, who qualifies, and why your 740+ score is worth real money.",
-    metaDescription: "Episode 1: Learn what a real estate credit partnership is and how people with 740+ credit scores are earning $15K–$100K lump-sum payouts.",
+    metaDescription: "Episode 1: Learn what a real estate credit partnership is and how people with 740+ credit scores are earning $5K–$35K lump-sum payouts.",
     duration: "3 min",
     date: "February 12, 2026",
     category: "Getting Started",
@@ -91,7 +91,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     ],
     cta: {
       headline: "Ready to Put Your Credit to Work?",
-      text: "If you have a 740+ credit score, you could earn $15K–$100K through a credit partnership. Apply at qvaholdings.com — it takes 2 minutes.",
+      text: "If you have a 740+ credit score, you could earn $5K–$35K through a credit partnership. Apply at qvaholdings.com — it takes 2 minutes.",
     },
   },
   {
@@ -150,7 +150,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
 
       `## Why This Creates an Opportunity for You`,
 
-      `Let me connect the dots. QVA Holdings owns income-producing properties. They refinance using DSCR loans. Your 740+ credit score dramatically improves the interest rate. The savings are real and substantial. They share those savings with you as a $15K–$100K payout. And the non-recourse structure means your personal assets are protected.`,
+      `Let me connect the dots. QVA Holdings owns income-producing properties. They refinance using DSCR loans. Your 740+ credit score dramatically improves the interest rate. The savings are real and substantial. They share those savings with you as a $5K–$35K payout. And the non-recourse structure means your personal assets are protected.`,
 
       `It's a straightforward value exchange: your credit score creates value, and you get paid for that value. No cash investment. No property management. No repayment.`,
 
@@ -165,8 +165,8 @@ export const podcastEpisodes: PodcastEpisode[] = [
     slug: "5-ways-to-leverage-your-credit-score-in-2026",
     episodeNumber: 3,
     title: "5 Ways to Leverage Your Credit Score in 2026 (Most People Only Know 2)",
-    subtitle: "Your credit score can do more than get you a mortgage. Here are five strategies — including one that could pay you $100K.",
-    metaDescription: "Episode 3: Discover 5 ways to leverage your credit score for income in 2026, including real estate credit partnerships that pay $15K–$100K.",
+    subtitle: "Your credit score can do more than get you a mortgage. Here are five strategies — including one that could pay you $35K.",
+    metaDescription: "Episode 3: Discover 5 ways to leverage your credit score for income in 2026, including real estate credit partnerships that pay $5K–$35K.",
     duration: "3 min",
     date: "February 7, 2026",
     category: "Credit Strategy",
@@ -233,7 +233,7 @@ export const podcastEpisodes: PodcastEpisode[] = [
     ],
     cta: {
       headline: "Your Credit Score Could Be Your Highest-Earning Asset",
-      text: "Stop leaving money on the table. A single credit partnership with QVA Holdings could pay you $15K–$100K. Apply now at qvaholdings.com.",
+      text: "Stop leaving money on the table. A single credit partnership with QVA Holdings could pay you $5K–$35K. Apply now at qvaholdings.com.",
     },
   },
 ];

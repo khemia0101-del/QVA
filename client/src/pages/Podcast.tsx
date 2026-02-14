@@ -21,7 +21,7 @@ export default function Podcast() {
     document.title = "The Credit Partnership Playbook Podcast — QVA Holdings";
     const descMeta = document.querySelector('meta[name="description"]');
     if (descMeta) {
-      descMeta.setAttribute("content", "Listen to The Credit Partnership Playbook podcast series. Deep dives into credit partnerships, DSCR financing, and strategies to leverage your 740+ credit score for $15K–$100K. Includes full transcripts.");
+      descMeta.setAttribute("content", "Listen to The Credit Partnership Playbook podcast series. Deep dives into credit partnerships, DSCR financing, and strategies to leverage your 740+ credit score for $5K–$35K. Includes full transcripts.");
     }
   }, []);
 
@@ -207,7 +207,7 @@ export default function Podcast() {
             Your Credit Score Is Worth More Than You Think
           </h2>
           <p className="text-white/60 text-lg mb-8 max-w-2xl mx-auto">
-            If you have a 740+ credit score, you could earn $15K–$100K through a credit partnership with QVA Holdings. No cash investment. No repayment.
+            If you have a 740+ credit score, you could earn $5K–$35K through a credit partnership with QVA Holdings. No cash investment. No repayment.
           </p>
           <Link href="/#apply">
             <Button size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-10 py-6">

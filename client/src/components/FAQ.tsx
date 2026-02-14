@@ -57,7 +57,7 @@ export default function FAQ() {
     },
     {
       question: "Can I do multiple partnerships?",
-      answer: "Absolutely! Many of our most successful partners have completed 2–5 partnerships. Each partnership is independent, and as long as you maintain your credit score and the previous partnerships are performing well, you can participate in additional deals. Some partners earn $100K+ per year through multiple partnerships. We give priority access to repeat partners for new opportunities.",
+      answer: "Absolutely! Many of our most successful partners have completed 2–5 partnerships. Each partnership is independent, and as long as you maintain your credit score and the previous partnerships are performing well, you can participate in additional deals. Some partners earn $35K+ per year through multiple partnerships. We give priority access to repeat partners for new opportunities.",
       icon: TrendingUp,
       category: "financial",
     },

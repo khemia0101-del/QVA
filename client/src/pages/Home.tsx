@@ -284,7 +284,7 @@ export default function Home() {
               className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-white leading-[1.1] mb-6"
             >
               Turn Your Credit Score Into{" "}
-              <span className="gold-gradient-text">$15K–$100K</span>
+              <span className="gold-gradient-text">$5K–$35K</span>
             </motion.h1>
 
             <motion.p
@@ -393,7 +393,7 @@ export default function Home() {
                 step: 5,
                 icon: DollarSign,
                 title: "We Share Savings",
-                desc: "You receive $15K–$100K as a lump-sum payout at closing. Guaranteed in writing.",
+                desc: "You receive $5K–$35K as a lump-sum payout at closing. Guaranteed in writing.",
               },
             ].map((item, i) => (
               <AnimatedSection key={i} delay={i * 0.1}>
@@ -573,7 +573,7 @@ export default function Home() {
                       </div>
                     </div>
                     <div className="absolute bottom-6 left-6 text-left">
-                      <div className="text-white font-serif text-xl">The $100K Credit Unlock</div>
+                      <div className="text-white font-serif text-xl">The $35K Credit Unlock</div>
                       <div className="text-white/60 text-sm">Turn Your Score into Cash — 6 min</div>
                     </div>
                   </button>

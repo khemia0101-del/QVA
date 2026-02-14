@@ -11,9 +11,9 @@ export default function ValueStack() {
   const valueItems = [
     {
       icon: TrendingUp,
-      title: "$15,000–$100,000 Payout",
-      description: "Average partner earns $50K per deal",
-      value: "$50,000",
+      title: "$5,250–$35,000 Payout",
+      description: "Average partner earns $17.5K per deal",
+      value: "$17,500",
     },
     {
       icon: Shield,
@@ -112,7 +112,7 @@ export default function ValueStack() {
           >
             <div className="mb-6">
               <div className="text-white/60 text-sm tracking-widest uppercase mb-2">Total Value</div>
-              <div className="text-5xl lg:text-6xl text-gold font-serif mb-2">$68,000+</div>
+              <div className="text-5xl lg:text-6xl text-gold font-serif mb-2">$23,800+</div>
               <div className="text-white/40 text-sm">in services, protection, and earning potential</div>
             </div>
 
@@ -141,7 +141,7 @@ export default function ValueStack() {
             className="text-center mt-8"
           >
             <p className="text-muted-foreground text-sm">
-              🔒 <strong>127 people</strong> applied this month · ⭐ <strong>4.9/5</strong> average partner rating
+              🔒 <strong>44 people</strong> applied this month · ⭐ <strong>4.9/5</strong> average partner rating
             </p>
           </motion.div>
         </div>
