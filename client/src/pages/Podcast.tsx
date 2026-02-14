@@ -12,6 +12,7 @@ import { ArrowRight, Clock, Headphones, Mic, ChevronRight, Play } from "lucide-r
 import { motion } from "framer-motion";
 import { podcastEpisodes, podcastCategories } from "@/lib/podcastData";
 import { IMAGES } from "@/lib/images";
+import EmailSignup from "@/components/EmailSignup";
 
 export default function Podcast() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -213,6 +214,27 @@ export default function Podcast() {
               Check Your Eligibility <ArrowRight className="ml-2" size={20} />
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* ─── CALENDLY BOOKING ─── */}
+      <section className="py-24 lg:py-32 bg-cream">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl lg:text-4xl text-navy mb-4 font-serif">Schedule a Consultation</h2>
+            <p className="text-muted-foreground text-lg">Ready to discuss your credit partnership opportunity? Book a call with our team.</p>
+          </div>
+          <div className="flex justify-center">
+            <div className="w-full max-w-2xl">
+              <iframe
+                src="https://calendly.com/qvaholdings/consultation"
+                width="100%"
+                height="700"
+                frameBorder="0"
+                title="Schedule a consultation with QVA Holdings"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -28,6 +28,8 @@ import {
 } from "lucide-react";
 import { motion, useInView } from "framer-motion";
 import { Link } from "wouter";
+import { trpc } from "@/lib/trpc";
+import { toast } from "sonner";
 
 // CDN URLs for property images
 const IMAGES = {
@@ -99,10 +101,30 @@ export default function Home() {
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const submitLeadMutation = trpc.leads.submit.useMutation();
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormSubmitted(true);
+    setIsSubmitting(true);
+
+    try {
+      await submitLeadMutation.mutateAsync({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        creditScore: formData.creditScore,
+      });
+      setFormSubmitted(true);
+      setFormData({ name: "", email: "", phone: "", creditScore: "" });
+      toast.success("Application submitted! We'll contact you within 24 hours.");
+    } catch (error) {
+      toast.error("Failed to submit application. Please try again.");
+      console.error("Form submission error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const scrollToSection = (id: string) => {

@@ -12,6 +12,7 @@ import { ArrowRight, Clock, Calendar, ChevronRight, BookOpen } from "lucide-reac
 import { motion } from "framer-motion";
 import { blogPosts, blogCategories } from "@/lib/blogData";
 import { IMAGES } from "@/lib/images";
+import EmailSignup from "@/components/EmailSignup";
 
 export default function Blog() {
   const [activeCategory, setActiveCategory] = useState("All");
@@ -138,7 +139,14 @@ export default function Blog() {
       {/* ─── POST GRID ─── */}
       <section className="pb-16 lg:pb-24">
         <div className="container">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-6">
+            {/* Email Signup Sidebar */}
+            <div className="lg:col-start-3 lg:row-start-1 h-fit sticky top-32">
+              <EmailSignup source="blog" title="Get Blog Updates" description="Subscribe to receive new articles on credit partnerships and real estate financing." />
+            </div>
+            
+            {/* Blog Posts Grid */}
+            <div className="md:col-span-2 lg:col-span-2">
             {filteredPosts.slice(1).map((post, i) => (
               <motion.div
                 key={post.slug}
@@ -178,6 +186,7 @@ export default function Blog() {
                 </Link>
               </motion.div>
             ))}
+            </div>
           </div>
         </div>
       </section>
@@ -196,6 +205,27 @@ export default function Blog() {
               Apply Now <ArrowRight className="ml-2" size={20} />
             </Button>
           </Link>
+        </div>
+      </section>
+
+      {/* ─── CALENDLY BOOKING ─── */}
+      <section className="py-24 lg:py-32 bg-cream">
+        <div className="container">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <h2 className="text-3xl lg:text-4xl text-navy mb-4 font-serif">Schedule a Consultation</h2>
+            <p className="text-muted-foreground text-lg">Ready to discuss your credit partnership opportunity? Book a call with our team.</p>
+          </div>
+          <div className="flex justify-center">
+            <div className="w-full max-w-2xl">
+              <iframe
+                src="https://calendly.com/qvaholdings/consultation"
+                width="100%"
+                height="700"
+                frameBorder="0"
+                title="Schedule a consultation with QVA Holdings"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

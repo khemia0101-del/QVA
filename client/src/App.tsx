@@ -9,8 +9,8 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Podcast from "./pages/Podcast";
 import PodcastEpisode from "./pages/PodcastEpisode";
-
 function Router() {
+  // make sure to consider if you need authentication for certain routes
   return (
     <Switch>
       <Route path={"/"} component={Home} />
